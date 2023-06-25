@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Математичні функції й константи</title>
+    <script>
+        function displayMathConstantsAndFunctions() {
+            // Константи
+            var eulerConstant = Math.E;
+            var piConstant = Math.PI;
+            var decimalLogOfE = Math.LN10;
+            var binaryLogOfE = Math.LOG2E;
+            var naturalLogOf10 = Math.LN10;
+            var naturalLogOf2 = Math.LN2;
+            var squareRootOf2 = Math.SQRT2;
+            var squareRootOfOneHalf = 1 / Math.SQRT2;
+            
+            // Функції
+            var randomNum = Math.random();
+            var arcCosineOfZero = Math.acos(0);
+            var sineOfZeroRadians = Math.sin(0);
+            var sineOf90Degrees = Math.sin(Math.PI / 2);
+            var arcSineOfOne = Math.asin(1);
+            var tangentOf45Degrees = Math.tan(Math.PI / 4);
+
+            // Виведення результатів
+            var output = "КОНСТАНТИ:<br>";
+            output += "1. Значення константи е = " + eulerConstant + "<br>";
+            output += "2. Значення константи π = " + piConstant + "<br>";
+            output += "3. Десятковий логарифм постійної Ейлера (е) = " + decimalLogOfE + "<br>";
+            output += "4. Двійковий логарифм постійної Ейлера (е) = " + binaryLogOfE + "<br>";
+            output += "5. Натуральний логарифм числа 10 = " + naturalLogOf10 + "<br>";
+            output += "6. Натуральний логарифм числа 2 = " + naturalLogOf2 + "<br>";
+            output += "7. Корінь квадратний із двох = " + squareRootOf2 + "<br>";
+            output += "8. Корінь квадратний з однієї другої = " + squareRootOfOneHalf + "<br><br>";
+            
+            output += "ФУНКЦІЇ:<br>";
+            output += "7. Результат обчислення арккосинуса нуля: " + arcCosineOfZero + "<br>";
+            output += "8. Результат обчислення синуса нуля радіан: " + sineOfZeroRadians + "<br>";
+            output += "9. Синус 90 градусів (π / 2 радіан): " + sineOf90Degrees + "<br>";
+            output += "10. Результат обчислення арксинуса одиниці: " + arcSineOfOne + "<br>";
+           
+            output += "11. Тангенс 45 градусів (π / 4 радіан): " + tangentOf45Degrees + "<br>";
+            output += " Генератор випадкових чисел: " + randomNum + "<br>";
+
+            // Виведення результатів
+            document.getElementById("output").innerHTML = output;
+            }
+            </script>
+            </head>
+            <body>
+            <button onclick="displayMathConstantsAndFunctions()">Вивести інформацію</button>
+            <br>
+            <br>
+            <div id="output"></div>
+            </body>
+            </html>
+            

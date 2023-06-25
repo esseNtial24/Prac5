@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <label>
+        from
+        <input type="number" max="0" min="-10" value="-6" id="from_range" />
+      </label>
+      <label>
+        to
+        <input type="number" max="10" min="0" value="6" id="to_range" />
+      </label>
+      <label>
+        step
+        <input type="number" min="0.1" value="1"  id="step" />
+      </label>
+      <button id="button">Count</button>
+    </div>
+    <ul id="list">
+
+    </ul>
+    <script>
+      const fromRange = document.querySelector("#from_range");
+      const toRange = document.querySelector("#to_range");
+      const stepInput = document.querySelector("#step");      
+      const list = document.querySelector("#list");
+      const button = document.querySelector("#button");
+
+      button.addEventListener("click", () => {
+        list.innerHTML = "";
+        for (let x = parseFloat(fromRange.value); x < parseFloat(toRange.value) + (parseFloat(stepInput.value) / 2); x += parseFloat(stepInput.value)) {
+          const li = document.createElement("li");
+          let result;
+
+          if (x < 0) {
+            result = Math.pow(Math.tan(x), 3);
+          } else if (x === 0) {
+            result = Math.PI;
+          } else {
+            result = Math.sqrt(x) - Math.log10(x);
+          }
+
+          li.innerText = "F(" + x + ") = " + result;
+          list.appendChild(li);
+        }
+      });
+    </script>
+  </body>
+</html>
